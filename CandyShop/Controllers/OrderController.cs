@@ -45,7 +45,8 @@ namespace CandyShop.Controllers
                 ViewBag.CheckOutCompleteMessage = "Thank you for your order. Enjoy your candy";
                 return View();
             }
+            }
         }
     }
-}
+
 
