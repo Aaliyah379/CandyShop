@@ -1,4 +1,5 @@
 ﻿using CandyShop.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace CandyShop.Controllers
 {
+    [Authorize]
     public class OrderController : Controller
     {
         private readonly IOrderRepository _orderRepository;
@@ -36,17 +38,18 @@ namespace CandyShop.Controllers
                 {
                     _orderRepository.CreateOrder(order);
                     _shoppingCart.ClearCart();
-                    return RedirectToAction("Checkout is complete");
+                    return RedirectToAction("CheckoutComplete");
                 }
                 return View(order);
             }
-              public IActionResult CheckoutComplete()
-            {
-                ViewBag.CheckOutCompleteMessage = "Thank you for your order. Enjoy your candy";
-                return View();
-            }
-            }
+
+        }
+        public IActionResult CheckoutComplete()
+
+        {
+            ViewBag.CheckOutCompleteMessage = "Thank you for your order.Enjoy your candy";
+            return View();
         }
     }
-
+}
 

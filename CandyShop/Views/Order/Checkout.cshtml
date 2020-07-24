@@ -12,8 +12,6 @@
                 <span asp-validation-for="Firstname" class="danger"></span>
             </div>
         </div>
-
-
         <div class=" form-group">
             <label asp-for="LastName" class="col-md-2 control-label"></label>
             <div class="col-md-5">
@@ -37,23 +35,30 @@
             </div>
         </div>
         <div class=" form-group">
-            <label asp-for="ZipCode" class="col-md-2 control-label"></label>
+            <label asp-for="State" class="col-md-2 control-label"></label>
             <div class="col-md-5">
-                <input asp-for="ZipCode" class="form-control" />
-                <span asp-validation-for="ZipCode" class="danger"></span>
+                <input asp-for="State" class="form-control" />
+                <span asp-validation-for="State" class="danger"></span>
+</div>
             </div>
-        </div>
-        <div class=" form-group">
-            <label asp-for="PhoneNumber" class="col-md-2 control-label"></label>
-            <div class="col-md-5">
-                <input asp-for="PhoneNumber" class="form-control" />
-                <span asp-validation-for="PhoneNumber" class="danger"></span>
+            <div class=" form-group">
+                <label asp-for="ZipCode" class="col-md-2 control-label"></label>
+                <div class="col-md-5">
+                    <input asp-for="ZipCode" class="form-control" />
+                    <span asp-validation-for="ZipCode" class="danger"></span>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <div class=" col-md-offset-2 col-md-5">
-                <input type ="submit"class="btn btn-primary"value="Complete Order" />
-            </div> 
-        </div>
+            <div class=" form-group">
+                <label asp-for="PhoneNumber" class="col-md-2 control-label"></label>
+                <div class="col-md-5">
+                    <input asp-for="PhoneNumber" class="form-control" />
+                    <span asp-validation-for="PhoneNumber" class="danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class=" col-md-offset-2 col-md-5">
+                    <input type="submit" class="btn btn-primary" value="Complete Order" />
+                </div>
+            </div>
 
     </form>
